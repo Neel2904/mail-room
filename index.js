@@ -1,9 +1,9 @@
 import { SMTPServer } from "smtp-server";
 import { simpleParser } from "mailparser";
-import { MongoClient } from "mongodb";
 import { saveNewMail } from "./controllers/mail.js";
+import mongoose from "mongoose";
 
-const client = new MongoClient(process.env.MONGO_URI);
+const MONGO_URI = "mongodb+srv://Neel:neel2904@mail-room.m24vx.mongodb.net/";
 
 try {
   const server = new SMTPServer({
@@ -33,7 +33,7 @@ try {
       stream.on("end", cb);
     },
   });
-  client.connect().then(console.log("Mongodb connected!"));
+  mongoose.connect(MONGO_URI).then(console.log("MongoDB connected!!"));
   const savedMail = await saveNewMail({
     from: "Neel",
     to: "Neel",

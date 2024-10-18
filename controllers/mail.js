@@ -1,5 +1,4 @@
 import Mail from "../models/mail.js";
-
 const saveNewMail = async (mailData) => {
   const res = await Mail.create({
     from: mailData.from.text,
@@ -8,6 +7,7 @@ const saveNewMail = async (mailData) => {
     body: mailData.text,
     attachments: mailData.attachments,
   });
+  console.log({ res });
   return res;
 };
 
