@@ -11,6 +11,7 @@
   "description": "",
   "dependencies": {
     "@types/smtp-server": "^3.5.10",
+    "dotenv": "^16.4.5",
     "mailparser": "^3.7.1",
     "mongodb": "^6.9.0",
     "mongoose": "^8.7.2",
