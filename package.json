@@ -1,6 +1,7 @@
 {
   "name": "mail-server",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"
@@ -10,6 +11,9 @@
   "description": "",
   "dependencies": {
     "@types/smtp-server": "^3.5.10",
+    "mailparser": "^3.7.1",
+    "mongodb": "^6.9.0",
+    "mongoose": "^8.7.2",
     "nodemon": "^3.1.7",
     "smtp-server": "^3.13.5"
   }
